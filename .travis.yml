@@ -14,7 +14,7 @@ install:
  - if [ $TRAVIS_OS_NAME = linux ]; then sudo update-locale; fi
  - gcc --std=c99 test_month_names.c
 script:
- - export LC_TIME="cs_CZ.utf8"
+ - export LC_ALL="cs_CZ.UTF-8"
  - python3 test_month_names.py
  - ./a.out
 sudo: false

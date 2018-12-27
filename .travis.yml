@@ -6,11 +6,13 @@ addons:
   homebrew:
     packages:
       - python
+      - gcc
 install:
- - if [ $TRAVIS_OS_NAME = linux ]; then sudo locale-gen cs_CZ; fi
  - if [ $TRAVIS_OS_NAME = linux ]; then sudo locale-gen cs_CZ.UTF-8; fi
  - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt install -y python3; fi
  - if [ $TRAVIS_OS_NAME = linux ]; then sudo update-locale; fi
+ - gcc test_month_names.c
 script:
  - python3 test_month_names.py
+ - ./a.out
 sudo: false

@@ -20,6 +20,10 @@ def main():
     print("Locale: ", locale.getlocale(locale.LC_TIME)[0])
     print_format_string_and_month_names("%B")
     print_format_string_and_month_names("%OB")
+    locale.setlocale(locale.LC_TIME, "cs_CZ")
+    print("Locale: ", locale.getlocale(locale.LC_TIME)[0])
+    print_format_string_and_month_names("%B")
+    print_format_string_and_month_names("%OB")
 
 if __name__ == "__main__":
     main()

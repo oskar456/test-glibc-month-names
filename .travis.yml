@@ -7,10 +7,10 @@ addons:
     packages:
       - python
 install:
- - "[ $TRAVIS_OS_NAME = linux ] && sudo locale-gen cs_CZ"
- - "[ $TRAVIS_OS_NAME = linux ] && sudo locale-gen cs_CZ.UTF-8"
- - "[ $TRAVIS_OS_NAME = linux ] && sudo apt install -y python3"
- - "[ $TRAVIS_OS_NAME = linux ] && sudo update-locale"
+ - if [ $TRAVIS_OS_NAME = linux ]; then sudo locale-gen cs_CZ; fi
+ - if [ $TRAVIS_OS_NAME = linux ]; then sudo locale-gen cs_CZ.UTF-8; fi
+ - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt install -y python3; fi
+ - if [ $TRAVIS_OS_NAME = linux ]; then sudo update-locale; fi
 script:
  - python3 test_month_names.py
 sudo: false

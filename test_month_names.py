@@ -13,15 +13,13 @@ def print_format_string_and_month_names(fmt):
     print("")
 
 def main():
-    print("Locale: ", locale.getlocale(locale.LC_TIME)[0])
+    print("Locale:", locale.setlocale(locale.LC_TIME))
     print_format_string_and_month_names("%B")
     print_format_string_and_month_names("%OB")
-    locale.setlocale(locale.LC_TIME, "cs_CZ.UTF-8")
-    print("Locale: ", locale.getlocale(locale.LC_TIME)[0])
+    print("Locale:", locale.setlocale(locale.LC_TIME, ""))
     print_format_string_and_month_names("%B")
     print_format_string_and_month_names("%OB")
-    locale.setlocale(locale.LC_TIME, "cs_CZ")
-    print("Locale: ", locale.getlocale(locale.LC_TIME)[0])
+    print("Locale:", locale.setlocale(locale.LC_TIME, "cs_CZ"))
     print_format_string_and_month_names("%B")
     print_format_string_and_month_names("%OB")
 

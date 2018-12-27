@@ -25,7 +25,7 @@ int main(int argc, char* argv[]){
 	printf("Locale: %s\n", setlocale(LC_TIME, NULL));
 	print_format_string_and_month_names("%B");
 	print_format_string_and_month_names("%OB");
-	printf("Locale: %s\n", setlocale(LC_TIME, "cs_CZ.UTF8"));
+	printf("Locale: %s\n", setlocale(LC_TIME, ""));
 	print_format_string_and_month_names("%B");
 	print_format_string_and_month_names("%OB");
 	printf("Locale: %s\n", setlocale(LC_TIME, "cs_CZ"));

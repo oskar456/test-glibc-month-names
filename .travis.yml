@@ -2,6 +2,14 @@ language: python
 os:
  - linux
  - osx
+addons:
+  homebrew:
+    packages:
+      - python
+install:
+ - "[ $TRAVIS_OS_NAME = linux ] && sudo locale-gen cs_CZ"
+ - "[ $TRAVIS_OS_NAME = linux ] && sudo locale-gen cs_CZ.UTF-8"
+ - "[ $TRAVIS_OS_NAME = linux ] && sudo update-locale"
 python:
  - "3.6"
 script:

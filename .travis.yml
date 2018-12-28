@@ -17,6 +17,4 @@ script:
  - python3 test_month_names.py
  - gcc --std=c99 -o test_month_names test_month_names.c
  - ./test_month_names
- - gcc --std=c99 -o test_langinfo_altmon test_langinfo_altmon.c
- - ./test_langinfo_altmon
 sudo: false

@@ -12,9 +12,11 @@ install:
  - if [ $TRAVIS_OS_NAME = linux ]; then sudo locale-gen cs_CZ.UTF-8; fi
  - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt install -y python3; fi
  - if [ $TRAVIS_OS_NAME = linux ]; then sudo update-locale; fi
- - gcc --std=c99 test_month_names.c
+ - gcc --std=c99 -o test_month_names test_month_names.c
+ - gcc --std=c99 -o test_langinfo_altmon test_langinfo_altmon.c
 script:
  - export LC_ALL="cs_CZ.UTF-8"
  - python3 test_month_names.py
- - ./a.out
+ - ./test_month_names
+ - ./test_langinfo_altmon
 sudo: false
